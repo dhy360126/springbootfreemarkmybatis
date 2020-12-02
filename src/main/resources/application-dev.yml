@@ -1,0 +1,35 @@
+server:
+  port: 8080
+
+##spring整合多数据源配置
+spring:
+  datasource:
+    test:
+      jdbc-url: jdbc:mysql://localhost:3306/test?useUnicode=true&characterEncoding=UTF8&useSSL=true&serverTimezone=UTC
+      username: root
+      password: root
+      driver-class-name: com.mysql.jdbc.Driver
+    test2:
+      jdbc-url: jdbc:mysql://localhost:3306/test2?useUnicode=true&characterEncoding=UTF8&useSSL=true&serverTimezone=UTC
+      username: root
+      password: root
+      driver-class-name: com.mysql.jdbc.Driver
+
+  freemarker:
+    template-loader-path:
+      - classpath:/templates/
+    cache: false
+    charset: UTF-8
+    check-template-location: true
+    content-type:
+      text/html
+    expose-request-attributes: true
+    expose-session-attributes: true
+    suffix: .ftl
+
+
+
+mybatis:
+    mapper-locations: classpath:mapping/**/*.xml
+    type-aliases-package: com.example.demo.entity
+
