@@ -16,7 +16,7 @@ import javax.sql.DataSource;
 import java.io.IOException;
 
 @Configuration
-@MapperScan(basePackages = "com.example.demo.dao.db2",sqlSessionTemplateRef = "db2SqlSessionTemplate")
+@MapperScan(basePackages = "com.example.demo.dao.db2", sqlSessionTemplateRef = "db2SqlSessionTemplate")
 public class DataSourceConfig2 {
     @Primary
     @Bean("db2DataSource")
